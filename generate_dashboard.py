@@ -6,7 +6,7 @@ DATA_FILE = Path(__file__).parent / "data" / "events.json"
 OUTPUT_FILE = Path(__file__).parent / "dashboard.html"
 CALENDAR_MONTHS = 3
 
-TEMPLATE = r"""<title>Chine à Paris</title>
+TEMPLATE = r"""<title>Chineur Parisien</title>
 <style>
 :root{
   --paper:#eef1e8; --surface:#ffffff; --surface-2:#e4e8dc;
@@ -116,7 +116,7 @@ section.view{display:flex; flex-direction:column; gap:20px;}
 
 <div class="wrap">
   <header class="top">
-    <h1>Chine à Paris</h1>
+    <h1>Chineur Parisien</h1>
     <div class="sub">Vide-greniers, brocantes &amp; ventes de charité — Paris intra-muros</div>
     <div class="count" id="count"></div>
   </header>
