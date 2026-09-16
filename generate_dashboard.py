@@ -3,6 +3,7 @@ from datetime import datetime
 from pathlib import Path
 
 DATA_FILE = Path(__file__).parent / "data" / "events.json"
+FACEBOOK_FILE = Path(__file__).parent / "data" / "facebook_events.json"
 OUTPUT_FILE = Path(__file__).parent / "dashboard.html"
 
 TEMPLATE = r"""<title>Chineur Parisien</title>
@@ -124,6 +125,11 @@ section.view{display:flex; flex-direction:column; gap:20px;}
   display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
 }
 .day-empty{font-size:12px; color:var(--ink-muted); font-style:italic;}
+
+.fb-section{display:flex; flex-direction:column; gap:10px;}
+.fb-section h2{font-size:16px;}
+.fb-list{display:flex; flex-direction:column; gap:8px;}
+.badge.fb{color:var(--stamp); background:color-mix(in srgb, var(--stamp) 16%, var(--surface));}
 </style>
 
 <div class="wrap">
@@ -132,6 +138,11 @@ section.view{display:flex; flex-direction:column; gap:20px;}
     <div class="sub">Vide-greniers, brocantes &amp; ventes de charité — Paris intra-muros</div>
     <div class="count" id="count"></div>
   </header>
+
+  <section class="fb-section" id="fb-section" hidden>
+    <h2>📌 Repéré sur Facebook</h2>
+    <div class="fb-list" id="fb-list"></div>
+  </section>
 
   <div class="tabs" role="tablist">
     <button class="tab" id="tab-list" aria-selected="true" role="tab">Liste</button>
@@ -148,6 +159,7 @@ section.view{display:flex; flex-direction:column; gap:20px;}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
 <script>
 const EVENTS = __EVENTS_JSON__;
+const FACEBOOK_EVENTS = __FACEBOOK_EVENTS_JSON__;
 
 const MONTH_NAMES = ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
 const DAY_NAMES = ['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
@@ -312,6 +324,27 @@ function renderWeek(){
   document.getElementById('week-next').onclick = () => { state.weekOffset++; renderWeek(); };
 }
 
+function renderFacebook(){
+  const section = document.getElementById('fb-section');
+  const el = document.getElementById('fb-list');
+  const items = Object.values(FACEBOOK_EVENTS);
+  if (!items.length){ section.hidden = true; return; }
+  section.hidden = false;
+  items.sort((a, b) => new Date(b.added_at) - new Date(a.added_at));
+  el.innerHTML = '';
+  items.forEach(e => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <div class="card-title">${e.group_name}</div>
+      <div class="badges"><span class="badge fb">Facebook</span></div>
+      <div class="loc">${e.snippet || ''}</div>
+      <a class="link" href="${e.link}" target="_blank" rel="noopener">Voir le post →</a>
+    `;
+    el.appendChild(card);
+  });
+}
+
 function renderCount(){
   const filtered = Object.values(EVENTS).filter(matches);
   document.getElementById('count').textContent = `${filtered.length} événement${filtered.length>1?'s':''}`;
@@ -330,6 +363,7 @@ function renderAll(){
   renderCount();
   renderList();
   renderWeek();
+  renderFacebook();
 }
 
 document.getElementById('tab-list').onclick = () => switchView('list');
@@ -343,9 +377,14 @@ renderAll();
 
 def build():
     events = json.loads(DATA_FILE.read_text())
+    facebook_events = json.loads(FACEBOOK_FILE.read_text()) if FACEBOOK_FILE.exists() else {}
     html = TEMPLATE.replace("__EVENTS_JSON__", json.dumps(events, ensure_ascii=False))
+    html = html.replace("__FACEBOOK_EVENTS_JSON__", json.dumps(facebook_events, ensure_ascii=False))
     OUTPUT_FILE.write_text(html)
-    print(f"{OUTPUT_FILE} généré ({len(events)} événements, {OUTPUT_FILE.stat().st_size // 1024} Ko).")
+    print(
+        f"{OUTPUT_FILE} généré ({len(events)} événements, {len(facebook_events)} posts Facebook, "
+        f"{OUTPUT_FILE.stat().st_size // 1024} Ko)."
+    )
 
 
 if __name__ == "__main__":
