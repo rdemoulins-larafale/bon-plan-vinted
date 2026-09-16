@@ -1,10 +1,13 @@
 import json
+import os
 import re
 import sys
 from datetime import datetime, timedelta
 from pathlib import Path
 
 import requests
+
+import telegram
 
 SOURCES = {
     "vide-greniers": "https://vide-greniers.org/evenements/Paris-75",
@@ -119,10 +122,19 @@ def main():
     save(current)
 
     print(f"{len(current)} événements Paris intra-muros ({HORIZON_WEEKS} semaines), {len(new_ids)} nouveaux.")
+    telegram_configured = bool(os.environ.get("TELEGRAM_BOT_TOKEN"))
     for event_id in new_ids:
         e = current[event_id]
         arr = f"{e['arrondissement']}e" if e["arrondissement"] else "?"
         print(f"NOUVEAU [{e['source']}] {e['name']} — {e['start_date']} — {e['location_name']} (Paris {arr}) — {e['url']}")
+        if telegram_configured:
+            arr_label = f"Paris {arr}" if e["arrondissement"] else "Paris"
+            text = (
+                f"🧺 <b>{e['name']}</b>\n"
+                f"{e['start_date']} — {e['location_name']} ({arr_label})\n"
+                f"{e['url']}"
+            )
+            telegram.send_message(text)
 
 
 if __name__ == "__main__":
