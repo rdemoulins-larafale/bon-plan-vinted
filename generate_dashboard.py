@@ -4,7 +4,6 @@ from pathlib import Path
 
 DATA_FILE = Path(__file__).parent / "data" / "events.json"
 OUTPUT_FILE = Path(__file__).parent / "dashboard.html"
-CALENDAR_MONTHS = 3
 
 TEMPLATE = r"""<title>Chineur Parisien</title>
 <style>
@@ -97,21 +96,34 @@ section.view{display:flex; flex-direction:column; gap:20px;}
 .card a.link:hover{text-decoration:underline;}
 .empty{color:var(--ink-muted); font-size:14px; padding-block:24px; text-align:center;}
 
-.cal-month{display:flex; flex-direction:column; gap:8px;}
-.cal-grid{display:grid; grid-template-columns:repeat(7,1fr); gap:4px;}
-.cal-dow{
-  font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-muted);
-  text-align:center; text-transform:uppercase; letter-spacing:0.04em;
+.week-nav{display:flex; align-items:center; gap:8px;}
+.week-nav button{
+  font-family:'IBM Plex Mono',monospace; font-size:15px; font-weight:600;
+  width:36px; height:36px; flex:none; border-radius:10px; border:1px solid var(--border);
+  background:var(--surface); color:var(--ink); cursor:pointer;
 }
-.cal-cell{
-  aspect-ratio:1; border-radius:8px; border:1px solid var(--border); background:var(--surface);
-  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px;
-  font-family:'IBM Plex Mono',monospace; font-size:13px; cursor:default;
+.week-label{
+  flex:1; text-align:center; font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:15px;
 }
-.cal-cell.pad{visibility:hidden;}
-.cal-cell.has-events{cursor:pointer; border-color:var(--accent);}
-.cal-cell .dot{width:5px; height:5px; border-radius:50%; background:var(--stamp);}
-.cal-cell .n{font-size:9px; color:var(--ink-muted); font-variant-numeric:tabular-nums;}
+.day-row{display:flex; flex-direction:column; gap:8px; padding-block:12px; border-bottom:1px solid var(--border);}
+.day-row:last-child{border-bottom:none;}
+.day-row-head{display:flex; align-items:baseline; gap:8px;}
+.day-row-head .dname{
+  font-family:'Fraunces',Georgia,serif; font-weight:600; font-size:14px; text-transform:capitalize;
+}
+.day-row-head .dnum{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-muted);}
+.day-row-head.today .dname{color:var(--accent);}
+.vignette-wrap{display:flex; flex-wrap:wrap; gap:8px;}
+.vignette{
+  display:flex; flex-direction:column; gap:6px; text-decoration:none; color:inherit;
+  width:calc(50% - 4px); min-width:148px; box-sizing:border-box;
+  background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:10px;
+}
+.vignette .vname{
+  font-size:12.5px; font-weight:600; line-height:1.28;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+}
+.day-empty{font-size:12px; color:var(--ink-muted); font-style:italic;}
 </style>
 
 <div class="wrap">
@@ -123,7 +135,7 @@ section.view{display:flex; flex-direction:column; gap:20px;}
 
   <div class="tabs" role="tablist">
     <button class="tab" id="tab-list" aria-selected="true" role="tab">Liste</button>
-    <button class="tab" id="tab-cal" aria-selected="false" role="tab">Calendrier</button>
+    <button class="tab" id="tab-cal" aria-selected="false" role="tab">Semaine</button>
   </div>
 
   <input class="search" id="search" type="search" placeholder="Chercher un lieu, un quartier…" autocomplete="off">
@@ -136,9 +148,7 @@ section.view{display:flex; flex-direction:column; gap:20px;}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
 <script>
 const EVENTS = __EVENTS_JSON__;
-const CAL_MONTHS = __CAL_MONTHS__;
 
-const DOW = ['Lun','Mar','Mer','Jeu','Ven','Sam','Dim'];
 const MONTH_NAMES = ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
 const DAY_NAMES = ['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
 
@@ -151,7 +161,19 @@ function fmtDayHeading(date){
   return `${DAY_NAMES[date.getDay()]} ${date.getDate()} ${MONTH_NAMES[date.getMonth()]}`;
 }
 
-const state = { view: 'list', search: '', arrs: new Set() };
+function fmtDateStr(date){
+  return `${String(date.getDate()).padStart(2,'0')}/${String(date.getMonth()+1).padStart(2,'0')}/${date.getFullYear()}`;
+}
+
+function startOfWeek(date){
+  const d = new Date(date);
+  const dow = (d.getDay() + 6) % 7; // Monday = 0
+  d.setDate(d.getDate() - dow);
+  d.setHours(0, 0, 0, 0);
+  return d;
+}
+
+const state = { view: 'list', search: '', arrs: new Set(), weekOffset: 0 };
 
 function sourceLabel(s){ return s === 'vente-solidaire' ? 'Vente solidaire' : 'Vide-grenier / brocante'; }
 
@@ -229,66 +251,65 @@ function renderCard(e){
   return card;
 }
 
-function renderCalendar(){
+function renderVignette(e){
+  const a = document.createElement('a');
+  a.className = 'vignette';
+  a.href = e.url;
+  a.target = '_blank';
+  a.rel = 'noopener';
+  const arrBadge = e.arrondissement ? `<span class="badge arr">${e.arrondissement}e</span>` : `<span class="badge">Paris</span>`;
+  a.innerHTML = `<span class="vname">${e.name}</span><span class="badges">${arrBadge}</span>`;
+  return a;
+}
+
+function renderWeek(){
   const el = document.getElementById('view-cal');
   el.innerHTML = '';
-  const filtered = Object.values(EVENTS).filter(matches);
-  const byDate = new Map();
-  filtered.forEach(e => {
-    const key = e.start_date;
-    if (!byDate.has(key)) byDate.set(key, []);
-    byDate.get(key).push(e);
-  });
 
-  const today = new Date();
-  for (let m = 0; m < CAL_MONTHS; m++){
-    const monthDate = new Date(today.getFullYear(), today.getMonth() + m, 1);
-    const year = monthDate.getFullYear();
-    const month = monthDate.getMonth();
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
-    const firstDow = (new Date(year, month, 1).getDay() + 6) % 7; // Monday-first
+  const base = startOfWeek(new Date());
+  base.setDate(base.getDate() + state.weekOffset * 7);
+  const end = new Date(base);
+  end.setDate(end.getDate() + 6);
+  const today = fmtDateStr(new Date());
 
-    const wrap = document.createElement('div');
-    wrap.className = 'cal-month';
-    const h = document.createElement('h2');
-    h.textContent = `${MONTH_NAMES[month]} ${year}`;
-    wrap.appendChild(h);
+  const nav = document.createElement('div');
+  nav.className = 'week-nav';
+  nav.innerHTML = `
+    <button id="week-prev" aria-label="Semaine précédente">‹</button>
+    <div class="week-label">Semaine du ${base.getDate()} ${MONTH_NAMES[base.getMonth()].slice(0,3)} au ${end.getDate()} ${MONTH_NAMES[end.getMonth()].slice(0,3)} ${end.getFullYear()}</div>
+    <button id="week-next" aria-label="Semaine suivante">›</button>
+  `;
+  el.appendChild(nav);
 
-    const grid = document.createElement('div');
-    grid.className = 'cal-grid';
-    DOW.forEach(d => {
-      const dow = document.createElement('div');
-      dow.className = 'cal-dow';
-      dow.textContent = d;
-      grid.appendChild(dow);
-    });
-    for (let i = 0; i < firstDow; i++){
-      const pad = document.createElement('div');
-      pad.className = 'cal-cell pad';
-      grid.appendChild(pad);
+  for (let i = 0; i < 7; i++){
+    const d = new Date(base);
+    d.setDate(base.getDate() + i);
+    const dateStr = fmtDateStr(d);
+    const dayEvents = Object.values(EVENTS).filter(e => e.start_date === dateStr && matches(e));
+
+    const row = document.createElement('div');
+    row.className = 'day-row';
+    const head = document.createElement('div');
+    head.className = 'day-row-head' + (dateStr === today ? ' today' : '');
+    head.innerHTML = `<span class="dname">${DAY_NAMES[d.getDay()]}</span><span class="dnum">${d.getDate()} ${MONTH_NAMES[d.getMonth()]}</span>`;
+    row.appendChild(head);
+
+    if (dayEvents.length){
+      const wrap = document.createElement('div');
+      wrap.className = 'vignette-wrap';
+      dayEvents.forEach(e => wrap.appendChild(renderVignette(e)));
+      row.appendChild(wrap);
+    } else {
+      const empty = document.createElement('div');
+      empty.className = 'day-empty';
+      empty.textContent = 'Rien de repéré';
+      row.appendChild(empty);
     }
-    for (let d = 1; d <= daysInMonth; d++){
-      const dateStr = `${String(d).padStart(2,'0')}/${String(month+1).padStart(2,'0')}/${year}`;
-      const dayEvents = byDate.get(dateStr) || [];
-      const cell = document.createElement('div');
-      cell.className = 'cal-cell' + (dayEvents.length ? ' has-events' : '');
-      cell.innerHTML = `<span>${d}</span>` + (dayEvents.length ? `<span class="dot"></span><span class="n">${dayEvents.length}</span>` : '');
-      if (dayEvents.length){
-        cell.onclick = () => {
-          state.search = '';
-          document.getElementById('search').value = '';
-          switchView('list');
-          renderList();
-          const heading = [...document.querySelectorAll('.day-heading')]
-            .find(hd => hd.textContent === fmtDayHeading(parseFr(dateStr)));
-          if (heading) heading.scrollIntoView({behavior:'smooth', block:'start'});
-        };
-      }
-      grid.appendChild(cell);
-    }
-    wrap.appendChild(grid);
-    el.appendChild(wrap);
+    el.appendChild(row);
   }
+
+  document.getElementById('week-prev').onclick = () => { state.weekOffset--; renderWeek(); };
+  document.getElementById('week-next').onclick = () => { state.weekOffset++; renderWeek(); };
 }
 
 function renderCount(){
@@ -308,7 +329,7 @@ function renderAll(){
   renderChips();
   renderCount();
   renderList();
-  renderCalendar();
+  renderWeek();
 }
 
 document.getElementById('tab-list').onclick = () => switchView('list');
@@ -323,7 +344,6 @@ renderAll();
 def build():
     events = json.loads(DATA_FILE.read_text())
     html = TEMPLATE.replace("__EVENTS_JSON__", json.dumps(events, ensure_ascii=False))
-    html = html.replace("__CAL_MONTHS__", str(CALENDAR_MONTHS))
     OUTPUT_FILE.write_text(html)
     print(f"{OUTPUT_FILE} généré ({len(events)} événements, {OUTPUT_FILE.stat().st_size // 1024} Ko).")
 
