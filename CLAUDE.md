@@ -32,10 +32,13 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python scraper.py
 ```
 
-Écrit l'état courant dans `data/events.json` (non versionné) et affiche sur
-stdout les événements nouveaux depuis le dernier run (diff par `@id`, qui
-inclut la date — un événement récurrent hebdomadaire réapparaît donc comme
-"nouveau" à chaque occurrence : limitation connue, pas encore filtrée).
+Écrit l'état courant dans `data/events.json` (versionné dans git — nécessaire
+pour que la routine cloud planifiée, qui repart d'un checkout propre à chaque
+run, puisse diffuser uniquement les nouveautés d'un run à l'autre ; elle
+commit+push ce fichier après chaque exécution) et affiche sur stdout les
+événements nouveaux depuis le dernier run (diff par `@id`, qui inclut la
+date — un événement récurrent hebdomadaire réapparaît donc comme "nouveau"
+à chaque occurrence : limitation connue, pas encore filtrée).
 
 ## À venir
 
