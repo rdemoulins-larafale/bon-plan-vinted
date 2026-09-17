@@ -22,6 +22,8 @@ ARRONDISSEMENT_RE = re.compile(r"paris[\s\-]?(\d{1,2})(?:er|e|ème|eme)?\b", re.
 
 DATA_FILE = Path(__file__).parent / "data" / "events.json"
 HORIZON_WEEKS = 8
+ALERT_HORIZON_DAYS = 14
+DASHBOARD_URL = "https://rdemoulins-larafale.github.io/bon-plan-vinted/"
 
 
 def fetch_page(url):
@@ -122,19 +124,27 @@ def main():
     save(current)
 
     print(f"{len(current)} événements Paris intra-muros ({HORIZON_WEEKS} semaines), {len(new_ids)} nouveaux.")
-    telegram_configured = bool(os.environ.get("TELEGRAM_BOT_TOKEN"))
     for event_id in new_ids:
         e = current[event_id]
         arr = f"{e['arrondissement']}e" if e["arrondissement"] else "?"
         print(f"NOUVEAU [{e['source']}] {e['name']} — {e['start_date']} — {e['location_name']} (Paris {arr}) — {e['url']}")
-        if telegram_configured:
-            arr_label = f"Paris {arr}" if e["arrondissement"] else "Paris"
-            text = (
-                f"🧺 <b>{e['name']}</b>\n"
-                f"{e['start_date']} — {e['location_name']} ({arr_label})\n"
-                f"{e['url']}"
-            )
-            telegram.send_message(text)
+
+    alert_cutoff = datetime.now() + timedelta(days=ALERT_HORIZON_DAYS)
+    soon = [
+        current[eid] for eid in new_ids
+        if datetime.strptime(current[eid]["start_date"], "%d/%m/%Y") <= alert_cutoff
+    ]
+    soon.sort(key=lambda e: datetime.strptime(e["start_date"], "%d/%m/%Y"))
+
+    if soon and os.environ.get("TELEGRAM_BOT_TOKEN"):
+        lines = [f"🧺 <b>{len(soon)} nouveau{'x' if len(soon) > 1 else ''} d'ici {ALERT_HORIZON_DAYS} jours</b>"]
+        for e in soon[:15]:
+            arr = f"Paris {e['arrondissement']}e" if e["arrondissement"] else "Paris"
+            lines.append(f"• {e['start_date']} — {e['name']} ({arr})")
+        if len(soon) > 15:
+            lines.append(f"… et {len(soon) - 15} autres")
+        lines.append(f"\nVoir le dashboard : {DASHBOARD_URL}")
+        telegram.send_message("\n".join(lines))
 
 
 if __name__ == "__main__":
