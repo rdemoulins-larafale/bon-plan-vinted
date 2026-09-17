@@ -2248,6 +2248,19 @@
     "start_date": "27/09/2026",
     "url": "https://vide-greniers.org/evenement/1026197/20260927"
   },
+  "https://vide-greniers.org/evenement/1026407/20261010": {
+    "arrondissement": 9,
+    "end_date": "10/10/2026",
+    "id": "https://vide-greniers.org/evenement/1026407/20261010",
+    "lat": 48.8814,
+    "location_name": "23, Avenue Trudaine, Quartier de Rochechouart",
+    "lon": 2.34372,
+    "name": "VIDE GRENIERS, BROC, AVENUE DE TRUDAINE PARIS 9EME",
+    "organizer": "RZ ORGANISATION",
+    "source": "vide-greniers",
+    "start_date": "10/10/2026",
+    "url": "https://vide-greniers.org/evenement/1026407/20261010"
+  },
   "https://vide-greniers.org/evenement/299628/20260917": {
     "arrondissement": 12,
     "end_date": "17/09/2026",
