@@ -124,6 +124,10 @@ section.view{display:flex; flex-direction:column; gap:20px;}
   font-size:12.5px; font-weight:600; line-height:1.28;
   display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
 }
+.vignette .vloc{
+  font-size:11px; color:var(--ink-muted); line-height:1.25;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+}
 .day-empty{font-size:12px; color:var(--ink-muted); font-style:italic;}
 
 .fb-section{display:flex; flex-direction:column; gap:10px;}
@@ -269,8 +273,7 @@ function renderVignette(e){
   a.href = e.url;
   a.target = '_blank';
   a.rel = 'noopener';
-  const arrBadge = e.arrondissement ? `<span class="badge arr">${e.arrondissement}e</span>` : `<span class="badge">Paris</span>`;
-  a.innerHTML = `<span class="vname">${e.name}</span><span class="badges">${arrBadge}</span>`;
+  a.innerHTML = `<span class="vname">${e.name}</span><span class="vloc">${e.location_name || 'Paris'}</span>`;
   return a;
 }
 
