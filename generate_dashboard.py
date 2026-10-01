@@ -4,7 +4,7 @@ from pathlib import Path
 
 DATA_FILE = Path(__file__).parent / "data" / "events.json"
 FACEBOOK_FILE = Path(__file__).parent / "data" / "facebook_events.json"
-OUTPUT_FILE = Path(__file__).parent / "dashboard.html"
+OUTPUT_FILE = Path(__file__).parent / "docs" / "index.html"
 
 TEMPLATE = r"""<title>Chineur Parisien</title>
 <style>
@@ -380,6 +380,7 @@ def build():
     facebook_events = json.loads(FACEBOOK_FILE.read_text()) if FACEBOOK_FILE.exists() else {}
     html = TEMPLATE.replace("__EVENTS_JSON__", json.dumps(events, ensure_ascii=False))
     html = html.replace("__FACEBOOK_EVENTS_JSON__", json.dumps(facebook_events, ensure_ascii=False))
+    OUTPUT_FILE.parent.mkdir(exist_ok=True)
     OUTPUT_FILE.write_text(html)
     print(
         f"{OUTPUT_FILE} généré ({len(events)} événements, {len(facebook_events)} posts Facebook, "
