@@ -38,19 +38,6 @@
     "start_date": "10/10/2026",
     "url": "https://vente-solidaire.org/evenement/1032146/20261010"
   },
-  "https://vente-solidaire.org/evenement/592168/20261006": {
-    "arrondissement": null,
-    "end_date": "06/10/2026",
-    "id": "https://vente-solidaire.org/evenement/592168/20261006",
-    "lat": 48.887,
-    "location_name": "Église Sainte-Odile, Tunnel Champerret, Quartier de la Plaine-de-Monceau",
-    "lon": 2.29335,
-    "name": "Vente solidaire église sainte Odile Porte de Champerret.",
-    "organizer": "Eter911",
-    "source": "vente-solidaire",
-    "start_date": "06/10/2026",
-    "url": "https://vente-solidaire.org/evenement/592168/20261006"
-  },
   "https://vente-solidaire.org/evenement/592168/20261020": {
     "arrondissement": null,
     "end_date": "20/10/2026",
@@ -1546,19 +1533,6 @@
     "start_date": "01/11/2026",
     "url": "https://vide-greniers.org/evenement/1032297/20261101"
   },
-  "https://vide-greniers.org/evenement/1032375/20261006": {
-    "arrondissement": null,
-    "end_date": "06/10/2026",
-    "id": "https://vide-greniers.org/evenement/1032375/20261006",
-    "lat": null,
-    "location_name": "Rue de Fontarabie",
-    "lon": null,
-    "name": "Vide garage",
-    "organizer": "replay",
-    "source": "vide-greniers",
-    "start_date": "06/10/2026",
-    "url": "https://vide-greniers.org/evenement/1032375/20261006"
-  },
   "https://vide-greniers.org/evenement/1032375/20261007": {
     "arrondissement": null,
     "end_date": "07/10/2026",
@@ -2001,18 +1975,18 @@
     "start_date": "24/10/2026",
     "url": "https://vide-greniers.org/evenement/1032812/20261024"
   },
-  "https://vide-greniers.org/evenement/299628/20261006": {
-    "arrondissement": 12,
-    "end_date": "06/10/2026",
-    "id": "https://vide-greniers.org/evenement/299628/20261006",
-    "lat": 48.8492,
-    "location_name": "Place d'Aligre",
-    "lon": 2.37847,
-    "name": "Brocante Puces de la place d'Aligre",
-    "organizer": "www.aligredebarras.fr",
+  "https://vide-greniers.org/evenement/1033035/20261018": {
+    "arrondissement": null,
+    "end_date": "18/10/2026",
+    "id": "https://vide-greniers.org/evenement/1033035/20261018",
+    "lat": 48.8247,
+    "location_name": "28, Avenue Reille",
+    "lon": 2.33958,
+    "name": "Vides greniers de montsouris",
+    "organizer": "pascalorganisation",
     "source": "vide-greniers",
-    "start_date": "06/10/2026",
-    "url": "https://vide-greniers.org/evenement/299628/20261006"
+    "start_date": "18/10/2026",
+    "url": "https://vide-greniers.org/evenement/1033035/20261018"
   },
   "https://vide-greniers.org/evenement/299628/20261007": {
     "arrondissement": 12,
