@@ -1988,6 +1988,32 @@
     "start_date": "18/10/2026",
     "url": "https://vide-greniers.org/evenement/1033035/20261018"
   },
+  "https://vide-greniers.org/evenement/1033230/20261107": {
+    "arrondissement": null,
+    "end_date": "07/11/2026",
+    "id": "https://vide-greniers.org/evenement/1033230/20261107",
+    "lat": 48.8475,
+    "location_name": "2, Boulevard Davout Porte de Vincennes",
+    "lon": 2.4115,
+    "name": "VIDE GRENIER DAVOUT / VINCENNES",
+    "organizer": "BVEVENTS",
+    "source": "vide-greniers",
+    "start_date": "07/11/2026",
+    "url": "https://vide-greniers.org/evenement/1033230/20261107"
+  },
+  "https://vide-greniers.org/evenement/1033247/20261010": {
+    "arrondissement": null,
+    "end_date": "10/10/2026",
+    "id": "https://vide-greniers.org/evenement/1033247/20261010",
+    "lat": 48.8289,
+    "location_name": "165, Boulevard Lefebvre, Quartier Saint-Lambert",
+    "lon": 2.30099,
+    "name": "Vide Grenier Paris Plaine/ Boulevard Lefebvre",
+    "organizer": "APP15",
+    "source": "vide-greniers",
+    "start_date": "10/10/2026",
+    "url": "https://vide-greniers.org/evenement/1033247/20261010"
+  },
   "https://vide-greniers.org/evenement/299628/20261007": {
     "arrondissement": 12,
     "end_date": "07/10/2026",
@@ -2801,7 +2827,7 @@
     "lat": 48.8328,
     "location_name": "59, Boulevard Saint-Jacques",
     "lon": 2.33611,
-    "name": "V.G. Boulevard St Jacques ( places disponibles)",
+    "name": "V.G. Boulevard St Jacques de l'association la Cantine le Monde Bouge",
     "organizer": "melodie02",
     "source": "vide-greniers",
     "start_date": "11/10/2026",
