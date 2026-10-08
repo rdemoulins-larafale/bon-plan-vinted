@@ -1442,19 +1442,6 @@
     "start_date": "25/10/2026",
     "url": "https://vide-greniers.org/evenement/1031141/20261025"
   },
-  "https://vide-greniers.org/evenement/1031384/20261007": {
-    "arrondissement": 6,
-    "end_date": "07/10/2026",
-    "id": "https://vide-greniers.org/evenement/1031384/20261007",
-    "lat": null,
-    "location_name": "126, Rue De Vaugirard",
-    "lon": null,
-    "name": "Vide-Grenier de l'Hôtel Louison",
-    "organizer": "Hôtel Louison",
-    "source": "vide-greniers",
-    "start_date": "07/10/2026",
-    "url": "https://vide-greniers.org/evenement/1031384/20261007"
-  },
   "https://vide-greniers.org/evenement/1031384/20261008": {
     "arrondissement": 6,
     "end_date": "08/10/2026",
@@ -1532,19 +1519,6 @@
     "source": "vide-greniers",
     "start_date": "01/11/2026",
     "url": "https://vide-greniers.org/evenement/1032297/20261101"
-  },
-  "https://vide-greniers.org/evenement/1032375/20261007": {
-    "arrondissement": null,
-    "end_date": "07/10/2026",
-    "id": "https://vide-greniers.org/evenement/1032375/20261007",
-    "lat": null,
-    "location_name": "Rue de Fontarabie",
-    "lon": null,
-    "name": "Vide garage",
-    "organizer": "replay",
-    "source": "vide-greniers",
-    "start_date": "07/10/2026",
-    "url": "https://vide-greniers.org/evenement/1032375/20261007"
   },
   "https://vide-greniers.org/evenement/1032375/20261008": {
     "arrondissement": null,
@@ -2014,18 +1988,18 @@
     "start_date": "10/10/2026",
     "url": "https://vide-greniers.org/evenement/1033247/20261010"
   },
-  "https://vide-greniers.org/evenement/299628/20261007": {
-    "arrondissement": 12,
-    "end_date": "07/10/2026",
-    "id": "https://vide-greniers.org/evenement/299628/20261007",
-    "lat": 48.8492,
-    "location_name": "Place d'Aligre",
-    "lon": 2.37847,
-    "name": "Brocante Puces de la place d'Aligre",
-    "organizer": "www.aligredebarras.fr",
+  "https://vide-greniers.org/evenement/1033316/20261011": {
+    "arrondissement": null,
+    "end_date": "11/10/2026",
+    "id": "https://vide-greniers.org/evenement/1033316/20261011",
+    "lat": 48.8672,
+    "location_name": "Atmos Arena, 4, Rue du Caire, Quartier de Bonne-Nouvelle",
+    "lon": 2.35245,
+    "name": "Atmos Card Show",
+    "organizer": "Atmos Arena",
     "source": "vide-greniers",
-    "start_date": "07/10/2026",
-    "url": "https://vide-greniers.org/evenement/299628/20261007"
+    "start_date": "11/10/2026",
+    "url": "https://vide-greniers.org/evenement/1033316/20261011"
   },
   "https://vide-greniers.org/evenement/299628/20261008": {
     "arrondissement": 12,
