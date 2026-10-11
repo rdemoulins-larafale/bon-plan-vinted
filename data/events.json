@@ -25,19 +25,6 @@
     "start_date": "11/12/2026",
     "url": "https://vente-solidaire.org/evenement/1004997/20261211"
   },
-  "https://vente-solidaire.org/evenement/1032146/20261010": {
-    "arrondissement": null,
-    "end_date": "10/10/2026",
-    "id": "https://vente-solidaire.org/evenement/1032146/20261010",
-    "lat": 48.8792,
-    "location_name": "17, Rue Fénelon, Quartier Saint-Vincent-de-Paul",
-    "lon": 2.35153,
-    "name": "Braderie de M. Vincent",
-    "organizer": "Vincent de Paul",
-    "source": "vente-solidaire",
-    "start_date": "10/10/2026",
-    "url": "https://vente-solidaire.org/evenement/1032146/20261010"
-  },
   "https://vente-solidaire.org/evenement/592168/20261020": {
     "arrondissement": null,
     "end_date": "20/10/2026",
@@ -363,19 +350,6 @@
     "start_date": "12/11/2026",
     "url": "https://vide-greniers.org/evenement/1011133/20261112"
   },
-  "https://vide-greniers.org/evenement/1012252/20261010": {
-    "arrondissement": 17,
-    "end_date": "10/10/2026",
-    "id": "https://vide-greniers.org/evenement/1012252/20261010",
-    "lat": 48.8777,
-    "location_name": "Porte Maillot, Place de la Porte Maillot, Quartier des Ternes",
-    "lon": 2.2827,
-    "name": "VG/BROC PARVIS GARE MAILLOT 75017",
-    "organizer": "EGS SA Brocante",
-    "source": "vide-greniers",
-    "start_date": "10/10/2026",
-    "url": "https://vide-greniers.org/evenement/1012252/20261010"
-  },
   "https://vide-greniers.org/evenement/1012253/20261011": {
     "arrondissement": 17,
     "end_date": "11/10/2026",
@@ -428,18 +402,44 @@
     "start_date": "18/10/2026",
     "url": "https://vide-greniers.org/evenement/1012506/20261018"
   },
-  "https://vide-greniers.org/evenement/1013199/20261010": {
-    "arrondissement": 9,
-    "end_date": "10/10/2026",
-    "id": "https://vide-greniers.org/evenement/1013199/20261010",
-    "lat": 48.8705,
-    "location_name": "Boulevard de Bonne Nouvelle,",
-    "lon": 2.34875,
-    "name": "Vide-greniers Bd Bonne Nouvelle - Paris 2è - Métro Grands Boulevards",
+  "https://vide-greniers.org/evenement/1012959/20261120": {
+    "arrondissement": 4,
+    "end_date": "20/11/2026",
+    "id": "https://vide-greniers.org/evenement/1012959/20261120",
+    "lat": 48.855,
+    "location_name": "Place des Vosges",
+    "lon": 2.36539,
+    "name": "⭐\"NOUVEAU\" \"BROCANTE - VINTAGE - DESIGN\" - Place des Vosges - Paris 4ème",
     "organizer": "OHVL",
     "source": "vide-greniers",
-    "start_date": "10/10/2026",
-    "url": "https://vide-greniers.org/evenement/1013199/20261010"
+    "start_date": "20/11/2026",
+    "url": "https://vide-greniers.org/evenement/1012959/20261120"
+  },
+  "https://vide-greniers.org/evenement/1012959/20261121": {
+    "arrondissement": 4,
+    "end_date": "21/11/2026",
+    "id": "https://vide-greniers.org/evenement/1012959/20261121",
+    "lat": 48.855,
+    "location_name": "Place des Vosges",
+    "lon": 2.36539,
+    "name": "⭐\"NOUVEAU\" \"BROCANTE - VINTAGE - DESIGN\" - Place des Vosges - Paris 4ème",
+    "organizer": "OHVL",
+    "source": "vide-greniers",
+    "start_date": "21/11/2026",
+    "url": "https://vide-greniers.org/evenement/1012959/20261121"
+  },
+  "https://vide-greniers.org/evenement/1012959/20261122": {
+    "arrondissement": 4,
+    "end_date": "22/11/2026",
+    "id": "https://vide-greniers.org/evenement/1012959/20261122",
+    "lat": 48.855,
+    "location_name": "Place des Vosges",
+    "lon": 2.36539,
+    "name": "⭐\"NOUVEAU\" \"BROCANTE - VINTAGE - DESIGN\" - Place des Vosges - Paris 4ème",
+    "organizer": "OHVL",
+    "source": "vide-greniers",
+    "start_date": "22/11/2026",
+    "url": "https://vide-greniers.org/evenement/1012959/20261122"
   },
   "https://vide-greniers.org/evenement/1013200/20261011": {
     "arrondissement": 11,
@@ -492,19 +492,6 @@
     "source": "vide-greniers",
     "start_date": "18/10/2026",
     "url": "https://vide-greniers.org/evenement/1013206/20261018"
-  },
-  "https://vide-greniers.org/evenement/1013209/20261010": {
-    "arrondissement": 11,
-    "end_date": "10/10/2026",
-    "id": "https://vide-greniers.org/evenement/1013209/20261010",
-    "lat": 48.8523,
-    "location_name": "Rue Faidherbe",
-    "lon": 2.38334,
-    "name": "Brocante - Rue Faidherbe -Paris 11e - Métro Faidherbe",
-    "organizer": "OHVL",
-    "source": "vide-greniers",
-    "start_date": "10/10/2026",
-    "url": "https://vide-greniers.org/evenement/1013209/20261010"
   },
   "https://vide-greniers.org/evenement/1013209/20261011": {
     "arrondissement": 11,
@@ -622,19 +609,6 @@
     "source": "vide-greniers",
     "start_date": "01/11/2026",
     "url": "https://vide-greniers.org/evenement/1014172/20261101"
-  },
-  "https://vide-greniers.org/evenement/1016159/20261010": {
-    "arrondissement": null,
-    "end_date": "10/10/2026",
-    "id": "https://vide-greniers.org/evenement/1016159/20261010",
-    "lat": 48.8789,
-    "location_name": "40, Avenue des Ternes, Quartier des Ternes",
-    "lon": 2.29302,
-    "name": "brocante ternes",
-    "organizer": "SPAM",
-    "source": "vide-greniers",
-    "start_date": "10/10/2026",
-    "url": "https://vide-greniers.org/evenement/1016159/20261010"
   },
   "https://vide-greniers.org/evenement/1016159/20261011": {
     "arrondissement": null,
@@ -844,19 +818,6 @@
     "start_date": "11/10/2026",
     "url": "https://vide-greniers.org/evenement/1020294/20261011"
   },
-  "https://vide-greniers.org/evenement/1020746/20261010": {
-    "arrondissement": 15,
-    "end_date": "10/10/2026",
-    "id": "https://vide-greniers.org/evenement/1020746/20261010",
-    "lat": 48.8353,
-    "location_name": "Place Charles Vallin, Rue de Vouillé, Quartier Saint-Lambert",
-    "lon": 2.30311,
-    "name": "VIDE GRENIER VOUILLE PARIS 15",
-    "organizer": "BVEVENTS",
-    "source": "vide-greniers",
-    "start_date": "10/10/2026",
-    "url": "https://vide-greniers.org/evenement/1020746/20261010"
-  },
   "https://vide-greniers.org/evenement/1021362/20261018": {
     "arrondissement": null,
     "end_date": "18/10/2026",
@@ -882,19 +843,6 @@
     "source": "vide-greniers",
     "start_date": "25/10/2026",
     "url": "https://vide-greniers.org/evenement/1021370/20261025"
-  },
-  "https://vide-greniers.org/evenement/1021841/20261010": {
-    "arrondissement": null,
-    "end_date": "10/10/2026",
-    "id": "https://vide-greniers.org/evenement/1021841/20261010",
-    "lat": 48.8931,
-    "location_name": "49 bis, Rue des Cloÿs, Quartier des Grandes-Carrières",
-    "lon": 2.33754,
-    "name": "Soa Vide-Dressing",
-    "organizer": "traye",
-    "source": "vide-greniers",
-    "start_date": "10/10/2026",
-    "url": "https://vide-greniers.org/evenement/1021841/20261010"
   },
   "https://vide-greniers.org/evenement/1021841/20261011": {
     "arrondissement": null,
@@ -1065,18 +1013,31 @@
     "start_date": "11/10/2026",
     "url": "https://vide-greniers.org/evenement/1025917/20261011"
   },
-  "https://vide-greniers.org/evenement/1026407/20261010": {
-    "arrondissement": 9,
-    "end_date": "10/10/2026",
-    "id": "https://vide-greniers.org/evenement/1026407/20261010",
-    "lat": 48.8814,
-    "location_name": "23, Avenue Trudaine, Quartier de Rochechouart",
-    "lon": 2.34372,
-    "name": "VIDE GRENIERS, BROC, AVENUE DE TRUDAINE PARIS 9EME",
-    "organizer": "RZ ORGANISATION",
+  "https://vide-greniers.org/evenement/1026162/20261121": {
+    "arrondissement": null,
+    "end_date": "21/11/2026",
+    "id": "https://vide-greniers.org/evenement/1026162/20261121",
+    "lat": 48.8518,
+    "location_name": "École Saint Louis, 10, Rue du Petit Musc, Quartier de l'Arsenal",
+    "lon": 2.36307,
+    "name": "Marché de Noël école St Louis",
+    "organizer": "Vero75012",
     "source": "vide-greniers",
-    "start_date": "10/10/2026",
-    "url": "https://vide-greniers.org/evenement/1026407/20261010"
+    "start_date": "21/11/2026",
+    "url": "https://vide-greniers.org/evenement/1026162/20261121"
+  },
+  "https://vide-greniers.org/evenement/1026162/20261122": {
+    "arrondissement": null,
+    "end_date": "22/11/2026",
+    "id": "https://vide-greniers.org/evenement/1026162/20261122",
+    "lat": 48.8518,
+    "location_name": "École Saint Louis, 10, Rue du Petit Musc, Quartier de l'Arsenal",
+    "lon": 2.36307,
+    "name": "Marché de Noël école St Louis",
+    "organizer": "Vero75012",
+    "source": "vide-greniers",
+    "start_date": "22/11/2026",
+    "url": "https://vide-greniers.org/evenement/1026162/20261122"
   },
   "https://vide-greniers.org/evenement/1026408/20261024": {
     "arrondissement": null,
@@ -1221,19 +1182,6 @@
     "start_date": "11/11/2026",
     "url": "https://vide-greniers.org/evenement/1029196/20261111"
   },
-  "https://vide-greniers.org/evenement/1029818/20261010": {
-    "arrondissement": null,
-    "end_date": "10/10/2026",
-    "id": "https://vide-greniers.org/evenement/1029818/20261010",
-    "lat": 48.8555,
-    "location_name": "Place de la Réunion",
-    "lon": 2.40122,
-    "name": "🎉 Grande Braderie de l’école Vitruve ! 🎉",
-    "organizer": null,
-    "source": "vide-greniers",
-    "start_date": "10/10/2026",
-    "url": "https://vide-greniers.org/evenement/1029818/20261010"
-  },
   "https://vide-greniers.org/evenement/1029863/20261114": {
     "arrondissement": 14,
     "end_date": "14/11/2026",
@@ -1272,6 +1220,45 @@
     "source": "vide-greniers",
     "start_date": "15/11/2026",
     "url": "https://vide-greniers.org/evenement/1029865/20261115"
+  },
+  "https://vide-greniers.org/evenement/1029868/20261121": {
+    "arrondissement": 15,
+    "end_date": "21/11/2026",
+    "id": "https://vide-greniers.org/evenement/1029868/20261121",
+    "lat": 48.8418,
+    "location_name": "Place Raoul Dautry, Bd Vaugirard",
+    "lon": 2.32048,
+    "name": "Vide-Greniers Pl Raoul Dautry Bd Vaugirard - Paris 15e - Métro Montparnasse",
+    "organizer": "OHVL",
+    "source": "vide-greniers",
+    "start_date": "21/11/2026",
+    "url": "https://vide-greniers.org/evenement/1029868/20261121"
+  },
+  "https://vide-greniers.org/evenement/1029869/20261122": {
+    "arrondissement": 12,
+    "end_date": "22/11/2026",
+    "id": "https://vide-greniers.org/evenement/1029869/20261122",
+    "lat": 48.8476,
+    "location_name": "Cours de Vincennes",
+    "lon": 2.40387,
+    "name": "Vide-Greniers Cours de Vincennes -Paris 12e - Métro Nation",
+    "organizer": "OHVL",
+    "source": "vide-greniers",
+    "start_date": "22/11/2026",
+    "url": "https://vide-greniers.org/evenement/1029869/20261122"
+  },
+  "https://vide-greniers.org/evenement/1029871/20261122": {
+    "arrondissement": 5,
+    "end_date": "22/11/2026",
+    "id": "https://vide-greniers.org/evenement/1029871/20261122",
+    "lat": 48.8381,
+    "location_name": "Boulevard de Port-Royal",
+    "lon": 2.34295,
+    "name": "Vide-Greniers MIXTE Bd de Port Royal - Paris 5e - Métro Port Royal",
+    "organizer": "OHVL",
+    "source": "vide-greniers",
+    "start_date": "22/11/2026",
+    "url": "https://vide-greniers.org/evenement/1029871/20261122"
   },
   "https://vide-greniers.org/evenement/1029884/20261107": {
     "arrondissement": 18,
@@ -1325,6 +1312,45 @@
     "start_date": "15/11/2026",
     "url": "https://vide-greniers.org/evenement/1029888/20261115"
   },
+  "https://vide-greniers.org/evenement/1029893/20261121": {
+    "arrondissement": 13,
+    "end_date": "21/11/2026",
+    "id": "https://vide-greniers.org/evenement/1029893/20261121",
+    "lat": 48.8295,
+    "location_name": "Avenue d'Italie",
+    "lon": 2.35623,
+    "name": "Brocante Av d'Italie - Paris 13e - Métro Place d'Italie",
+    "organizer": "OHVL",
+    "source": "vide-greniers",
+    "start_date": "21/11/2026",
+    "url": "https://vide-greniers.org/evenement/1029893/20261121"
+  },
+  "https://vide-greniers.org/evenement/1029893/20261122": {
+    "arrondissement": 13,
+    "end_date": "22/11/2026",
+    "id": "https://vide-greniers.org/evenement/1029893/20261122",
+    "lat": 48.8295,
+    "location_name": "Avenue d'Italie",
+    "lon": 2.35623,
+    "name": "Brocante Av d'Italie - Paris 13e - Métro Place d'Italie",
+    "organizer": "OHVL",
+    "source": "vide-greniers",
+    "start_date": "22/11/2026",
+    "url": "https://vide-greniers.org/evenement/1029893/20261122"
+  },
+  "https://vide-greniers.org/evenement/1030096/20261121": {
+    "arrondissement": null,
+    "end_date": "21/11/2026",
+    "id": "https://vide-greniers.org/evenement/1030096/20261121",
+    "lat": 48.8393,
+    "location_name": "49, Avenue de l'Observatoire, Quartier du Montparnasse",
+    "lon": 2.337,
+    "name": "vide grenier de l'Observatoire",
+    "organizer": "A.B.E.D.H",
+    "source": "vide-greniers",
+    "start_date": "21/11/2026",
+    "url": "https://vide-greniers.org/evenement/1030096/20261121"
+  },
   "https://vide-greniers.org/evenement/1030104/20261025": {
     "arrondissement": null,
     "end_date": "25/10/2026",
@@ -1337,19 +1363,6 @@
     "source": "vide-greniers",
     "start_date": "25/10/2026",
     "url": "https://vide-greniers.org/evenement/1030104/20261025"
-  },
-  "https://vide-greniers.org/evenement/1030328/20261010": {
-    "arrondissement": null,
-    "end_date": "10/10/2026",
-    "id": "https://vide-greniers.org/evenement/1030328/20261010",
-    "lat": 48.8847,
-    "location_name": "La Maison des Canaux, 6, Quai de la Seine",
-    "lon": 2.37078,
-    "name": "La Grande BRADERIE Solidaire",
-    "organizer": "Les Canaux",
-    "source": "vide-greniers",
-    "start_date": "10/10/2026",
-    "url": "https://vide-greniers.org/evenement/1030328/20261010"
   },
   "https://vide-greniers.org/evenement/1030868/20261011": {
     "arrondissement": null,
@@ -1403,19 +1416,6 @@
     "start_date": "25/10/2026",
     "url": "https://vide-greniers.org/evenement/1031141/20261025"
   },
-  "https://vide-greniers.org/evenement/1031461/20261010": {
-    "arrondissement": null,
-    "end_date": "10/10/2026",
-    "id": "https://vide-greniers.org/evenement/1031461/20261010",
-    "lat": 48.8972,
-    "location_name": "Avenue de Saint-Ouen,",
-    "lon": 2.32883,
-    "name": "Vide grenier avenue de Saint-Ouen",
-    "organizer": "A.B.E.D.H",
-    "source": "vide-greniers",
-    "start_date": "10/10/2026",
-    "url": "https://vide-greniers.org/evenement/1031461/20261010"
-  },
   "https://vide-greniers.org/evenement/1031915/20261011": {
     "arrondissement": null,
     "end_date": "11/10/2026",
@@ -1442,19 +1442,6 @@
     "start_date": "25/10/2026",
     "url": "https://vide-greniers.org/evenement/1032292/20261025"
   },
-  "https://vide-greniers.org/evenement/1032295/20261010": {
-    "arrondissement": null,
-    "end_date": "10/10/2026",
-    "id": "https://vide-greniers.org/evenement/1032295/20261010",
-    "lat": 48.8371,
-    "location_name": "23, Avenue Des Gobelins",
-    "lon": 2.35193,
-    "name": "Vide grenier Gobelins",
-    "organizer": "SPAM",
-    "source": "vide-greniers",
-    "start_date": "10/10/2026",
-    "url": "https://vide-greniers.org/evenement/1032295/20261010"
-  },
   "https://vide-greniers.org/evenement/1032297/20261101": {
     "arrondissement": 5,
     "end_date": "01/11/2026",
@@ -1467,19 +1454,6 @@
     "source": "vide-greniers",
     "start_date": "01/11/2026",
     "url": "https://vide-greniers.org/evenement/1032297/20261101"
-  },
-  "https://vide-greniers.org/evenement/1032375/20261010": {
-    "arrondissement": null,
-    "end_date": "10/10/2026",
-    "id": "https://vide-greniers.org/evenement/1032375/20261010",
-    "lat": null,
-    "location_name": "Rue de Fontarabie",
-    "lon": null,
-    "name": "Vide garage",
-    "organizer": "replay",
-    "source": "vide-greniers",
-    "start_date": "10/10/2026",
-    "url": "https://vide-greniers.org/evenement/1032375/20261010"
   },
   "https://vide-greniers.org/evenement/1032375/20261011": {
     "arrondissement": null,
@@ -1728,19 +1702,6 @@
     "start_date": "11/11/2026",
     "url": "https://vide-greniers.org/evenement/1032775/20261111"
   },
-  "https://vide-greniers.org/evenement/1032801/20261010": {
-    "arrondissement": null,
-    "end_date": "10/10/2026",
-    "id": "https://vide-greniers.org/evenement/1032801/20261010",
-    "lat": 48.8815,
-    "location_name": "197, Boulevard Pereire, Quartier des Ternes",
-    "lon": 2.29122,
-    "name": "Disques Vinyles 33T 45T CD BD tout à 5€",
-    "organizer": "galugo",
-    "source": "vide-greniers",
-    "start_date": "10/10/2026",
-    "url": "https://vide-greniers.org/evenement/1032801/20261010"
-  },
   "https://vide-greniers.org/evenement/1032812/20261023": {
     "arrondissement": null,
     "end_date": "23/10/2026",
@@ -1780,6 +1741,32 @@
     "start_date": "18/10/2026",
     "url": "https://vide-greniers.org/evenement/1033035/20261018"
   },
+  "https://vide-greniers.org/evenement/1033045/20261121": {
+    "arrondissement": null,
+    "end_date": "21/11/2026",
+    "id": "https://vide-greniers.org/evenement/1033045/20261121",
+    "lat": 48.8835,
+    "location_name": "Place de Lévis, Quartier de la Plaine-de-Monceau",
+    "lon": 2.31353,
+    "name": "VIDE-GRENIERS / BROCANTE PLACE LEVIS",
+    "organizer": "EGS SA Brocante",
+    "source": "vide-greniers",
+    "start_date": "21/11/2026",
+    "url": "https://vide-greniers.org/evenement/1033045/20261121"
+  },
+  "https://vide-greniers.org/evenement/1033061/20261122": {
+    "arrondissement": null,
+    "end_date": "22/11/2026",
+    "id": "https://vide-greniers.org/evenement/1033061/20261122",
+    "lat": 48.889,
+    "location_name": "Parc Martin Luther King",
+    "lon": 2.31611,
+    "name": "VIDE-GRENIERS / BROCANTE LUTHER KING",
+    "organizer": "EGS SA Brocante",
+    "source": "vide-greniers",
+    "start_date": "22/11/2026",
+    "url": "https://vide-greniers.org/evenement/1033061/20261122"
+  },
   "https://vide-greniers.org/evenement/1033230/20261107": {
     "arrondissement": null,
     "end_date": "07/11/2026",
@@ -1792,19 +1779,6 @@
     "source": "vide-greniers",
     "start_date": "07/11/2026",
     "url": "https://vide-greniers.org/evenement/1033230/20261107"
-  },
-  "https://vide-greniers.org/evenement/1033247/20261010": {
-    "arrondissement": null,
-    "end_date": "10/10/2026",
-    "id": "https://vide-greniers.org/evenement/1033247/20261010",
-    "lat": 48.8289,
-    "location_name": "165, Boulevard Lefebvre, Quartier Saint-Lambert",
-    "lon": 2.30099,
-    "name": "Vide Grenier Paris Plaine/ Boulevard Lefebvre",
-    "organizer": "APP15",
-    "source": "vide-greniers",
-    "start_date": "10/10/2026",
-    "url": "https://vide-greniers.org/evenement/1033247/20261010"
   },
   "https://vide-greniers.org/evenement/1033316/20261011": {
     "arrondissement": null,
@@ -1844,19 +1818,6 @@
     "source": "vide-greniers",
     "start_date": "31/10/2026",
     "url": "https://vide-greniers.org/evenement/1033526/20261031"
-  },
-  "https://vide-greniers.org/evenement/1033784/20261010": {
-    "arrondissement": null,
-    "end_date": "10/10/2026",
-    "id": "https://vide-greniers.org/evenement/1033784/20261010",
-    "lat": 48.8509,
-    "location_name": "Place Saint-Sulpice",
-    "lon": 2.33375,
-    "name": "Salon des antiquaires st sulpice",
-    "organizer": null,
-    "source": "vide-greniers",
-    "start_date": "10/10/2026",
-    "url": "https://vide-greniers.org/evenement/1033784/20261010"
   },
   "https://vide-greniers.org/evenement/1033784/20261011": {
     "arrondissement": null,
@@ -1961,19 +1922,6 @@
     "source": "vide-greniers",
     "start_date": "18/10/2026",
     "url": "https://vide-greniers.org/evenement/1033784/20261018"
-  },
-  "https://vide-greniers.org/evenement/299628/20261010": {
-    "arrondissement": 12,
-    "end_date": "10/10/2026",
-    "id": "https://vide-greniers.org/evenement/299628/20261010",
-    "lat": 48.8492,
-    "location_name": "Place d'Aligre",
-    "lon": 2.37847,
-    "name": "Brocante Puces de la place d'Aligre",
-    "organizer": "www.aligredebarras.fr",
-    "source": "vide-greniers",
-    "start_date": "10/10/2026",
-    "url": "https://vide-greniers.org/evenement/299628/20261010"
   },
   "https://vide-greniers.org/evenement/299628/20261011": {
     "arrondissement": 12,
@@ -2378,6 +2326,84 @@
     "start_date": "15/11/2026",
     "url": "https://vide-greniers.org/evenement/299628/20261115"
   },
+  "https://vide-greniers.org/evenement/299628/20261117": {
+    "arrondissement": 12,
+    "end_date": "17/11/2026",
+    "id": "https://vide-greniers.org/evenement/299628/20261117",
+    "lat": 48.8492,
+    "location_name": "Place d'Aligre",
+    "lon": 2.37847,
+    "name": "Brocante Puces de la place d'Aligre",
+    "organizer": "www.aligredebarras.fr",
+    "source": "vide-greniers",
+    "start_date": "17/11/2026",
+    "url": "https://vide-greniers.org/evenement/299628/20261117"
+  },
+  "https://vide-greniers.org/evenement/299628/20261118": {
+    "arrondissement": 12,
+    "end_date": "18/11/2026",
+    "id": "https://vide-greniers.org/evenement/299628/20261118",
+    "lat": 48.8492,
+    "location_name": "Place d'Aligre",
+    "lon": 2.37847,
+    "name": "Brocante Puces de la place d'Aligre",
+    "organizer": "www.aligredebarras.fr",
+    "source": "vide-greniers",
+    "start_date": "18/11/2026",
+    "url": "https://vide-greniers.org/evenement/299628/20261118"
+  },
+  "https://vide-greniers.org/evenement/299628/20261119": {
+    "arrondissement": 12,
+    "end_date": "19/11/2026",
+    "id": "https://vide-greniers.org/evenement/299628/20261119",
+    "lat": 48.8492,
+    "location_name": "Place d'Aligre",
+    "lon": 2.37847,
+    "name": "Brocante Puces de la place d'Aligre",
+    "organizer": "www.aligredebarras.fr",
+    "source": "vide-greniers",
+    "start_date": "19/11/2026",
+    "url": "https://vide-greniers.org/evenement/299628/20261119"
+  },
+  "https://vide-greniers.org/evenement/299628/20261120": {
+    "arrondissement": 12,
+    "end_date": "20/11/2026",
+    "id": "https://vide-greniers.org/evenement/299628/20261120",
+    "lat": 48.8492,
+    "location_name": "Place d'Aligre",
+    "lon": 2.37847,
+    "name": "Brocante Puces de la place d'Aligre",
+    "organizer": "www.aligredebarras.fr",
+    "source": "vide-greniers",
+    "start_date": "20/11/2026",
+    "url": "https://vide-greniers.org/evenement/299628/20261120"
+  },
+  "https://vide-greniers.org/evenement/299628/20261121": {
+    "arrondissement": 12,
+    "end_date": "21/11/2026",
+    "id": "https://vide-greniers.org/evenement/299628/20261121",
+    "lat": 48.8492,
+    "location_name": "Place d'Aligre",
+    "lon": 2.37847,
+    "name": "Brocante Puces de la place d'Aligre",
+    "organizer": "www.aligredebarras.fr",
+    "source": "vide-greniers",
+    "start_date": "21/11/2026",
+    "url": "https://vide-greniers.org/evenement/299628/20261121"
+  },
+  "https://vide-greniers.org/evenement/299628/20261122": {
+    "arrondissement": 12,
+    "end_date": "22/11/2026",
+    "id": "https://vide-greniers.org/evenement/299628/20261122",
+    "lat": 48.8492,
+    "location_name": "Place d'Aligre",
+    "lon": 2.37847,
+    "name": "Brocante Puces de la place d'Aligre",
+    "organizer": "www.aligredebarras.fr",
+    "source": "vide-greniers",
+    "start_date": "22/11/2026",
+    "url": "https://vide-greniers.org/evenement/299628/20261122"
+  },
   "https://vide-greniers.org/evenement/339132/20261025": {
     "arrondissement": null,
     "end_date": "25/10/2026",
@@ -2390,19 +2416,6 @@
     "source": "vide-greniers",
     "start_date": "25/10/2026",
     "url": "https://vide-greniers.org/evenement/339132/20261025"
-  },
-  "https://vide-greniers.org/evenement/379726/20261010": {
-    "arrondissement": null,
-    "end_date": "10/10/2026",
-    "id": "https://vide-greniers.org/evenement/379726/20261010",
-    "lat": 48.8309,
-    "location_name": "Marché du Livre ancien et d'occasion de Paris, 104 Rue Brancion, Quartier Saint-Lambert",
-    "lon": 2.30205,
-    "name": "Marché aux livres Paris",
-    "organizer": "Marchédulivre",
-    "source": "vide-greniers",
-    "start_date": "10/10/2026",
-    "url": "https://vide-greniers.org/evenement/379726/20261010"
   },
   "https://vide-greniers.org/evenement/379726/20261011": {
     "arrondissement": null,
@@ -2547,6 +2560,32 @@
     "start_date": "15/11/2026",
     "url": "https://vide-greniers.org/evenement/379726/20261115"
   },
+  "https://vide-greniers.org/evenement/379726/20261121": {
+    "arrondissement": null,
+    "end_date": "21/11/2026",
+    "id": "https://vide-greniers.org/evenement/379726/20261121",
+    "lat": 48.8309,
+    "location_name": "Marché du Livre ancien et d'occasion de Paris, 104 Rue Brancion, Quartier Saint-Lambert",
+    "lon": 2.30205,
+    "name": "Marché aux livres Paris",
+    "organizer": "Marchédulivre",
+    "source": "vide-greniers",
+    "start_date": "21/11/2026",
+    "url": "https://vide-greniers.org/evenement/379726/20261121"
+  },
+  "https://vide-greniers.org/evenement/379726/20261122": {
+    "arrondissement": null,
+    "end_date": "22/11/2026",
+    "id": "https://vide-greniers.org/evenement/379726/20261122",
+    "lat": 48.8309,
+    "location_name": "Marché du Livre ancien et d'occasion de Paris, 104 Rue Brancion, Quartier Saint-Lambert",
+    "lon": 2.30205,
+    "name": "Marché aux livres Paris",
+    "organizer": "Marchédulivre",
+    "source": "vide-greniers",
+    "start_date": "22/11/2026",
+    "url": "https://vide-greniers.org/evenement/379726/20261122"
+  },
   "https://vide-greniers.org/evenement/462418/20261111": {
     "arrondissement": null,
     "end_date": "11/11/2026",
@@ -2559,19 +2598,6 @@
     "source": "vide-greniers",
     "start_date": "11/11/2026",
     "url": "https://vide-greniers.org/evenement/462418/20261111"
-  },
-  "https://vide-greniers.org/evenement/483561/20261010": {
-    "arrondissement": null,
-    "end_date": "10/10/2026",
-    "id": "https://vide-greniers.org/evenement/483561/20261010",
-    "lat": 48.8246,
-    "location_name": "rue georges lafenestre et marcel sangnier",
-    "lon": 2.3103,
-    "name": "puces de vanves",
-    "organizer": "SEMACO",
-    "source": "vide-greniers",
-    "start_date": "10/10/2026",
-    "url": "https://vide-greniers.org/evenement/483561/20261010"
   },
   "https://vide-greniers.org/evenement/483561/20261011": {
     "arrondissement": null,
@@ -2715,6 +2741,32 @@
     "source": "vide-greniers",
     "start_date": "15/11/2026",
     "url": "https://vide-greniers.org/evenement/483561/20261115"
+  },
+  "https://vide-greniers.org/evenement/483561/20261121": {
+    "arrondissement": null,
+    "end_date": "21/11/2026",
+    "id": "https://vide-greniers.org/evenement/483561/20261121",
+    "lat": 48.8246,
+    "location_name": "rue georges lafenestre et marcel sangnier",
+    "lon": 2.3103,
+    "name": "puces de vanves",
+    "organizer": "SEMACO",
+    "source": "vide-greniers",
+    "start_date": "21/11/2026",
+    "url": "https://vide-greniers.org/evenement/483561/20261121"
+  },
+  "https://vide-greniers.org/evenement/483561/20261122": {
+    "arrondissement": null,
+    "end_date": "22/11/2026",
+    "id": "https://vide-greniers.org/evenement/483561/20261122",
+    "lat": 48.8246,
+    "location_name": "rue georges lafenestre et marcel sangnier",
+    "lon": 2.3103,
+    "name": "puces de vanves",
+    "organizer": "SEMACO",
+    "source": "vide-greniers",
+    "start_date": "22/11/2026",
+    "url": "https://vide-greniers.org/evenement/483561/20261122"
   },
   "https://vide-greniers.org/evenement/485228/20261107": {
     "arrondissement": null,
