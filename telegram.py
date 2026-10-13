@@ -10,13 +10,17 @@ def _post(method, payload):
     chat_id = os.environ.get("TELEGRAM_CHAT_ID")
     if not token or not chat_id:
         return None
-    resp = requests.post(
-        API_BASE.format(token=token, method=method),
-        json={"chat_id": chat_id, **payload},
-        timeout=10,
-    )
-    resp.raise_for_status()
-    return resp.json()
+    try:
+        resp = requests.post(
+            API_BASE.format(token=token, method=method),
+            json={"chat_id": chat_id, **payload},
+            timeout=10,
+        )
+        resp.raise_for_status()
+        return resp.json()
+    except requests.exceptions.RequestException as e:
+        print(f"Telegram indisponible ({method}): {e}")
+        return None
 
 
 def send_message(text):

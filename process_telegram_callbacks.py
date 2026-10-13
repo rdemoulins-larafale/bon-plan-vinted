@@ -36,7 +36,11 @@ def main():
         return
 
     offset = _load_offset()
-    updates = _call(token, "getUpdates", {"offset": offset, "timeout": 0}).get("result", [])
+    try:
+        updates = _call(token, "getUpdates", {"offset": offset, "timeout": 0}).get("result", [])
+    except requests.exceptions.RequestException as e:
+        print(f"Telegram indisponible, rien à traiter ({e}).")
+        return
 
     pending = facebook._load(facebook.PENDING_FILE)
     events = facebook._load(facebook.EVENTS_FILE)
