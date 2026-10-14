@@ -25,6 +25,32 @@
     "start_date": "11/12/2026",
     "url": "https://vente-solidaire.org/evenement/1004997/20261211"
   },
+  "https://vente-solidaire.org/evenement/1035615/20261128": {
+    "arrondissement": null,
+    "end_date": "28/11/2026",
+    "id": "https://vente-solidaire.org/evenement/1035615/20261128",
+    "lat": 48.8842,
+    "location_name": "Église Saint-Jean de Montmartre, 21, Rue des Abbesses",
+    "lon": 2.33791,
+    "name": "Kermesse",
+    "organizer": "Fab77",
+    "source": "vente-solidaire",
+    "start_date": "28/11/2026",
+    "url": "https://vente-solidaire.org/evenement/1035615/20261128"
+  },
+  "https://vente-solidaire.org/evenement/1035615/20261129": {
+    "arrondissement": null,
+    "end_date": "29/11/2026",
+    "id": "https://vente-solidaire.org/evenement/1035615/20261129",
+    "lat": 48.8842,
+    "location_name": "Église Saint-Jean de Montmartre, 21, Rue des Abbesses",
+    "lon": 2.33791,
+    "name": "Kermesse",
+    "organizer": "Fab77",
+    "source": "vente-solidaire",
+    "start_date": "29/11/2026",
+    "url": "https://vente-solidaire.org/evenement/1035615/20261129"
+  },
   "https://vente-solidaire.org/evenement/592168/20261020": {
     "arrondissement": null,
     "end_date": "20/10/2026",
