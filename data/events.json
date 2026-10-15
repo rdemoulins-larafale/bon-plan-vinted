@@ -1299,19 +1299,6 @@
     "start_date": "01/11/2026",
     "url": "https://vide-greniers.org/evenement/1032297/20261101"
   },
-  "https://vide-greniers.org/evenement/1032375/20261014": {
-    "arrondissement": null,
-    "end_date": "14/10/2026",
-    "id": "https://vide-greniers.org/evenement/1032375/20261014",
-    "lat": null,
-    "location_name": "Rue de Fontarabie",
-    "lon": null,
-    "name": "Vide garage",
-    "organizer": "replay",
-    "source": "vide-greniers",
-    "start_date": "14/10/2026",
-    "url": "https://vide-greniers.org/evenement/1032375/20261014"
-  },
   "https://vide-greniers.org/evenement/1032375/20261015": {
     "arrondissement": null,
     "end_date": "15/10/2026",
@@ -1598,19 +1585,6 @@
     "start_date": "31/10/2026",
     "url": "https://vide-greniers.org/evenement/1033526/20261031"
   },
-  "https://vide-greniers.org/evenement/1033784/20261014": {
-    "arrondissement": null,
-    "end_date": "14/10/2026",
-    "id": "https://vide-greniers.org/evenement/1033784/20261014",
-    "lat": 48.8509,
-    "location_name": "Place Saint-Sulpice",
-    "lon": 2.33375,
-    "name": "Salon des antiquaires st sulpice",
-    "organizer": null,
-    "source": "vide-greniers",
-    "start_date": "14/10/2026",
-    "url": "https://vide-greniers.org/evenement/1033784/20261014"
-  },
   "https://vide-greniers.org/evenement/1033784/20261015": {
     "arrondissement": null,
     "end_date": "15/10/2026",
@@ -1675,19 +1649,6 @@
     "source": "vide-greniers",
     "start_date": "25/10/2026",
     "url": "https://vide-greniers.org/evenement/1034653/20261025"
-  },
-  "https://vide-greniers.org/evenement/299628/20261014": {
-    "arrondissement": 12,
-    "end_date": "14/10/2026",
-    "id": "https://vide-greniers.org/evenement/299628/20261014",
-    "lat": 48.8492,
-    "location_name": "Place d'Aligre",
-    "lon": 2.37847,
-    "name": "Brocante Puces de la place d'Aligre",
-    "organizer": "www.aligredebarras.fr",
-    "source": "vide-greniers",
-    "start_date": "14/10/2026",
-    "url": "https://vide-greniers.org/evenement/299628/20261014"
   },
   "https://vide-greniers.org/evenement/299628/20261015": {
     "arrondissement": 12,
