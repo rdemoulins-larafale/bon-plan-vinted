@@ -1460,7 +1460,7 @@
     "end_date": "07/11/2026",
     "id": "https://vide-greniers.org/evenement/1033230/20261107",
     "lat": 48.8475,
-    "location_name": "2, Boulevard Davout Porte de Vincennes",
+    "location_name": "2, Boulevard Davout Porte de Vincennes Entre la porte de Vincennes et la porte de Montreuil",
     "lon": 2.4115,
     "name": "VIDE GRENIER DAVOUT / VINCENNES",
     "organizer": "BVEVENTS",
@@ -1571,6 +1571,32 @@
     "source": "vide-greniers",
     "start_date": "01/11/2026",
     "url": "https://vide-greniers.org/evenement/1035924/20261101"
+  },
+  "https://vide-greniers.org/evenement/1036215/20261101": {
+    "arrondissement": 2,
+    "end_date": "01/11/2026",
+    "id": "https://vide-greniers.org/evenement/1036215/20261101",
+    "lat": 48.8672,
+    "location_name": "Atmos Arena, 4, Rue du Caire, Quartier de Bonne-Nouvelle",
+    "lon": 2.35245,
+    "name": "Atmos Card Show",
+    "organizer": "Atmos Arena",
+    "source": "vide-greniers",
+    "start_date": "01/11/2026",
+    "url": "https://vide-greniers.org/evenement/1036215/20261101"
+  },
+  "https://vide-greniers.org/evenement/1036326/20261018": {
+    "arrondissement": null,
+    "end_date": "18/10/2026",
+    "id": "https://vide-greniers.org/evenement/1036326/20261018",
+    "lat": 48.8906,
+    "location_name": "61, bar culturel",
+    "lon": 2.38204,
+    "name": "vide-grenier au 61",
+    "organizer": "Nami",
+    "source": "vide-greniers",
+    "start_date": "18/10/2026",
+    "url": "https://vide-greniers.org/evenement/1036326/20261018"
   },
   "https://vide-greniers.org/evenement/299628/20261016": {
     "arrondissement": 12,
